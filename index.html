@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday My Love ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <style>
+    /* Basic Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      scroll-behavior: smooth;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #ffd1dc, #ffe4e9);
+      color: #444;
+      overflow-x: hidden;
+      animation: fadePage 2s ease forwards;
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      opacity: 1;
+      transition: opacity 1s ease;
+      position: relative;
+    }
+    .hidden {
+      opacity: 0;
+    }
+
+    /* Intro */
+    .intro h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: #d6336c;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    /* Memories */
+    .memory-card {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      padding: 20px;
+      max-width: 350px;
+      text-align: center;
+      perspective: 1000px;
+      transition: transform 0.5s;
+    }
+    .memory-card:hover {
+      transform: rotateY(10deg) rotateX(10deg);
+    }
+    .memory-card img {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+    .memory-card p {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5rem;
+      color: #c2185b;
+    }
+
+    /* Love Letter */
+    .letter-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 600px;
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: #d6336c;
+    }
+
+    /* Surprise Section */
+    .surprise button {
+      padding: 15px 30px;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 50px;
+      background-color: #ff6f91;
+      color: white;
+      font-family: 'Quicksand', sans-serif;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .surprise button:hover {
+      background-color: #ff3d6a;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: #777;
+      padding: 20px;
+      background: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+
+    @keyframes fadePage {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    /* Music Button */
+    .music-control {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ffb6b9;
+      border-radius: 50%;
+      padding: 15px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 10;
+    }
+    .music-control img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Hearts floating */
+    .heart {
+      width: 20px;
+      height: 20px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+      background-size: cover;
+      position: fixed;
+      bottom: 0;
+      animation: floatUp 10s infinite ease-in;
+      z-index: 0;
+    }
+    @keyframes floatUp {
+      0% {transform: translateY(0);}
+      100% {transform: translateY(-120vh);}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop autoplay hidden>
+  <source src="hbd.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- INTRO -->
+<section class="intro">
+  <h1>🎂 Happy Birthday, My Karupatti Halwa Vidhya bujju😘 🎂</h1>
+</section>
+
+<!-- MEMORY 1 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>Namma first meet, marakka mudiyaatha naal - 11 April 2023 💕</p>
+  </div>
+</section>
+
+<!-- MEMORY 2 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>Chat started with "Vanga Ponga" to "Chello Thango" within a month 🥺💕</p>
+  </div>
+</section>
+
+<!-- MEMORY 3 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>poga poga vc yenna, calls yenna, orae kadhals kadhals thaan 🎈😄</p>
+  </div>
+</section>
+
+<!-- MEMORY 4 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>Did you remember? namma convos start pannapo... aasa valathika venaam nu thaan solitu irundhom... aana... renduperukumae orutharku oruthara 2 months liyae romba pidichu poiruchu rendu perum maathi maathi care panikitapo 💕</p>
+  </div>
+</section>
+
+<!-- MEMORY 5 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>After that, unnoda dharun andhra poitaen. anga irukappo thaan namma love matter un veetuku theriya vandhichu. yevloooo periya porkalam ah maarichu. "Yenaku yen papa vidhya venum" nu un family ta alutha muthal naal - Jul 31, 2024🥺</p>
+  </div>
+</section>
+
+<!-- MEMORY 6 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>Next day, andhra la irundhu vandhathum un family ta pesinen. naanga rendu perum love pandrom, yengala pirika venaam ntu sonnen. un relatives and parents laam, seri un appa amma ta pesunga, avanga sammathicha marriage pani vachudrom ntu sonnaanga - August 2, 2024</p>
+  </div>
+</section>
+
+<!-- MEMORY 7 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>Yepdi pesrathu nu theriyaama kastapattutu irundha nerathula, namakkula neraya sandaikal vandhu piriyara alavuku pochu. but still, rendu perum onnu seranum ngra aasai rendu pera vittum polaga. so yepdiyo veetla pesiten. venaam nu avanga yenta yevlovo thaduthaanga. "Vidhya is my only wife in this birth" nu sonnen - March 18, 2025</p>
+  </div>
+</section>
+
+<!-- MEMORY 8 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>Finally, namaku mrg panni vekrathaa soltaanga - March 28, 2025🥺💕</p>
+  </div>
+</section>
+
+<!-- MEMORY 9 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>Yen papa vidhya va bike la kootnu suththanum nu yen papa vidhya kaaga bike yeduthen, annaikae unna andha bike la vachu kootnu ponen first time - April 14, 2025💕</p>
+  </div>
+</section>
+
+<!-- MEMORY 10 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>Then un veetuku vandhu un parents kitta... "Ipdi kalyanam panni vekrathaa solitaanga, ithuku mela dont try to separate us, ithukku mela mudiyaathu yepo marriage panni vekreenga ?" ntu ketu "August la vachuklaam pa" ntu un veetla sonna naal - April 19, 2025💕</p>
+  </div>
+</section>
+
+<!-- MEMORY 11 -->
+<section class="memory hidden">
+  <div class="memory-card">
+    <img src="chat.png" alt="Memory Icon">
+    <p>And now... today is your memorable birthday di my alaggggggggu dhevathai wifie vidhu ey 😘 - May 6, 2025💕</p>
+  </div>
+</section>
+
+<!-- LOVE LETTER -->
+<section class="letter hidden">
+  <div class="letter-container">
+    💌Love Letter💌<br><br>
+    Today is not just another date on the calendar —<br>
+    it’s the day the world was blessed with you.<br><br>
+
+    Without you, my life would feel like an unwritten story — empty, lost, unfinished.
+    Since the day I met you, even the simplest days have started to sparkle.
+    The very first lines my heart ever wrote in love — they were all for you. <br><br> 
+    Happy Birthday, my laddu baby vidhya bujjuuuu❤️
+  </div>
+</section>
+
+<!-- SURPRISE SECTION -->
+<section class="surprise hidden">
+  <button onclick="showPopup()">🎁 Click for Your Surprise 🎁</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  Made with endless love by Dharun ❤️
+</footer>
+
+<!-- JavaScript -->
+<script>
+  const sections = document.querySelectorAll('section');
+  const music = document.getElementById('bgMusic');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.remove('hidden');
+      } else {
+        entry.target.classList.add('hidden');
+      }
+    });
+  }, {threshold: 0.6});
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  function toggleMusic() {
+    if (music.paused) {
+      music.play();
+    } else {
+      music.pause();
+    }
+  }
+
+  function showPopup() {
+    alert("Surprise! 🎉 You mean the world to me ❤️");
+    confetti();
+  }
+
+  // Heart floating
+  setInterval(() => {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + 'vw';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 10000);
+  }, 500);
+</script>
+
+</body>
+</html>
