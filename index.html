@@ -302,6 +302,11 @@
     }
   }
 
+  window.addEventListener('scroll', () => {
+  const music = document.getElementById('bgMusic');
+  music.play();
+}, { once: true });
+
   function showPopup() {
     alert("Surprise! 🎉 You mean the world to me ❤️");
     confetti();
